@@ -47,6 +47,7 @@ appearance/
 footprint/
 interiorlayout/
 quest/
+clientdata/
 
 # External tool builders
 .externalToolBuilders/
