@@ -88,8 +88,7 @@ public class SUIService implements INetworkDispatch {
 				if(getRadialFilename(target).equals("default"))
 					return;
 				
-				sendRadial(owner, target, request.getRadialOptions(), request.getRadialCount());
-							
+				sendRadial(owner, target, request.getRadialOptions(), request.getRadialCount());						
 			}
 			
 		});
@@ -185,6 +184,8 @@ public class SUIService implements INetworkDispatch {
 		
 		if(owner.getClient() != null && owner.getClient().getSession() != null)
 			owner.getClient().getSession().write(objController.serialize());
+		
+		System.out.println("Sent radial " + getRadialFilename(target));
 	}
 
 	public Map<Integer, SUIWindow> getWindowMap() {
