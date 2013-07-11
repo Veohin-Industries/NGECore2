@@ -1,0 +1,12 @@
+=== Jython ====
+actor : CreatureObject
+
+
+=== Radials! ===
+All radial menus loaded inside the "scripts/radials" folder. Need to add a 
+object.setAttachment('radial_filename', 'name_of_the_radial_script_py) 
+to the objects actual script "scripts/object/...." in order for the radial menu to load. The radial
+system tries to get an attachment to the object, therefore you must set one in the scripts, 
+otherwise it will load default.py radial.
+
+When wanting to reference text for a radial, you can use "@location_of_stf_file" for the string.
