@@ -16,7 +16,6 @@ def run(core, actor, target, commandString):
 	inventory = actor.getSlottedObject('inventory')
 	
 	if inventory:
-		inventory.add(object)
-		
+		inventory.add(object)		
 	return
 	

@@ -80,13 +80,16 @@ public class SUIService implements INetworkDispatch {
 				if(target == null || owner == null)
 					return;
 				
-				
+				System.out.println("Detail name: " + target.getDetailName() + " Filename: " + target.getDetailFilename());
+				System.out.println("RadialFilename: " + getRadialFilename(target));
+				System.out.println("TargetId: " + request.getTargetId());
 				core.scriptService.callScript("scripts/radial/", getRadialFilename(target), "createRadial", core, owner, target, request.getRadialOptions());
+				
 				if(getRadialFilename(target).equals("default"))
 					return;
-	
-				sendRadial(owner, target, request.getRadialOptions(), request.getRadialCount());
 				
+				sendRadial(owner, target, request.getRadialOptions(), request.getRadialCount());
+							
 			}
 			
 		});

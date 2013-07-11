@@ -79,6 +79,11 @@ public class CommandService implements INetworkDispatch  {
 				if(command == null)
 					return;
 				
+				if(command.getCommandCRC() == CRC.StringtoCRC("giveitem"))
+					System.out.println(commandEnqueue.getCommandArguments());
+				
+				if(command.getCommandCRC() == CRC.StringtoCRC("setgodmode"))
+					System.out.println(commandEnqueue.getCommandArguments());
 				//if(command.getCommandCRC() == CRC.StringtoCRC("transferitemmisc"))
 					//System.out.println(commandEnqueue.getCommandArguments());
 				
@@ -95,9 +100,7 @@ public class CommandService implements INetworkDispatch  {
 				
 				//if(target == null)
 					//System.out.println("NULL Target");
-				
 				core.scriptService.callScript("scripts/commands/", command.getCommandName(), "run", core, actor, target, commandEnqueue.getCommandArguments());
-				
 			}
 			
 			
@@ -110,6 +113,7 @@ public class CommandService implements INetworkDispatch  {
 		
 		BaseSWGCommand command = new BaseSWGCommand(name);
 		commandLookup.add(command);
+		System.out.println("Registered command " + command.getCommandName() + " CRC: "+ command.getCommandCRC());
 	}
 
 	public BaseSWGCommand getCommandByCRC(int CRC) {

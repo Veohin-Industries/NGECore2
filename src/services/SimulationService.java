@@ -115,6 +115,8 @@ public class SimulationService implements INetworkDispatch {
 		core.commandService.registerCommand("giveitem");
 		core.commandService.registerCommand("object");
 		core.commandService.registerCommand("getattributesbatch");
+		core.commandService.registerCommand("setgodmode");
+		System.out.println("Commands registered...");
 		
 	}
 	
