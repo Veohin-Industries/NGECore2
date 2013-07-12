@@ -5,11 +5,12 @@ from java.util import Vector
 import sys
 
 def createRadial(core, owner, target, radials):
-    radials.add(RadialOptions(0, 242, 1, '')) 
-    radials.add(RadialOptions(0, 241, 1, ''))
-    radials.add(RadialOptions(0, 240, 1, ''))
-    radials.add(RadialOptions(0, 239, 1, ''))
-    radials.add(RadialOptions(0, 238, 1, ''))
+
+    radials.add(RadialOptions(0, 247, 1, ''))
+    radials.add(RadialOptions(0, 246, 1, ''))
+    radials.add(RadialOptions(0, 245, 1, ''))
+    radials.add(RadialOptions(0, 244, 1, ''))
+    radials.add(RadialOptions(0, 243, 1, ''))
     return
 
 def handleSelection(core, owner, target, option):
