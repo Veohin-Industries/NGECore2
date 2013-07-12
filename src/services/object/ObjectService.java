@@ -68,6 +68,7 @@ import main.NGECore;
 import resources.objects.building.BuildingObject;
 import resources.objects.cell.CellObject;
 import resources.objects.creature.CreatureObject;
+import resources.objects.guild.GuildObject;
 import resources.objects.player.PlayerObject;
 import resources.objects.staticobject.StaticObject;
 import resources.objects.tangible.TangibleObject;
@@ -151,6 +152,10 @@ public class ObjectService implements INetworkDispatch {
 		} else if(Template.startsWith("object/static")) {
 			
 			object = new StaticObject(objectID, planet, position, orientation, Template);
+			
+		} else if(Template.startsWith("object/guild")) {
+			
+			object = new GuildObject(objectID, planet, position, orientation, Template);
 			
 		} else {
 			
