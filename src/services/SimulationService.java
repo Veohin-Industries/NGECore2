@@ -29,18 +29,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledExecutorService;
 
 import main.NGECore;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
-import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
-
-import com.vividsolutions.jts.math.Matrix;
-
 
 import engine.clientdata.ClientFileManager;
 import engine.clientdata.visitors.MeshVisitor;
@@ -48,7 +43,6 @@ import engine.clientdata.visitors.PortalVisitor;
 import engine.clientdata.visitors.PortalVisitor.Cell;
 import engine.clients.Client;
 import engine.resources.objects.SWGObject;
-import engine.resources.scene.Grid2D;
 import engine.resources.scene.Planet;
 import engine.resources.scene.Point3D;
 import engine.resources.scene.Quaternion;
@@ -56,7 +50,6 @@ import engine.resources.scene.quadtree.QuadTree;
 import engine.resources.service.INetworkDispatch;
 import engine.resources.service.INetworkRemoteEvent;
 
-import protocol.swg.ClientIdMsg;
 import protocol.swg.ObjControllerMessage;
 import protocol.swg.OpenedContainerMessage;
 import protocol.swg.UpdateTransformMessage;
@@ -68,16 +61,15 @@ import protocol.swg.objectControllerObjects.TargetUpdate;
 import resources.objects.cell.CellObject;
 import resources.objects.creature.CreatureObject;
 import resources.common.*;
-import toxi.geom.Matrix4x4;
 import wblut.geom.WB_AABBNode;
 import wblut.geom.WB_AABBTree;
 import wblut.geom.WB_Intersection;
 import wblut.geom.WB_Point3d;
 import wblut.geom.WB_Ray;
 import wblut.geom.WB_Transform;
-import wblut.geom.WB_Vector3d;
 import wblut.hemesh.HE_Mesh;
-import wblut.math.WB_M44;
+
+@SuppressWarnings("unused")
 
 public class SimulationService implements INetworkDispatch {
 	
@@ -431,10 +423,6 @@ public class SimulationService implements INetworkDispatch {
 		Quaternion orientation = object.getOrientation();
 		Point3D position = object.getPosition();
 
-		if(object.getParentId() != 0) {
-			SWGObject parent = core.objectService.getObject(object.getParentId());
-			parent._add(object);
-		}
 
 		
 		Point3D pos = object.getWorldPosition();
@@ -449,11 +437,7 @@ public class SimulationService implements INetworkDispatch {
 		
 		if(object.getParentId() == 0)
 			add(object, pos.x, pos.z);
-		
-		//teleport(object, position, orientation);
-
-		//core.chatService.loadMailHeaders(client); // moved to beginning of zone-in like live
-
+	
 	}
 	
 	public void openContainer(SWGObject requester, SWGObject container) {
@@ -470,19 +454,14 @@ public class SimulationService implements INetworkDispatch {
 		
 		if(position.x >= -8192 && position.x <= 8192 && position.z >= -8192 && position.z <= 8192) {
 			
-			if(obj.getParentId() == 0) {
-				DataTransform dataTransform = new DataTransform(new Point3D(position.x, 0, position.z), orientation, obj.getMovementCounter(), obj.getObjectID());
-				ObjControllerMessage objController = new ObjControllerMessage(0x1B, dataTransform);
-				obj.notifyObservers(objController, true);
-			} else {
-				DataTransformWithParent dataTransform = new DataTransformWithParent(new Point3D(position.x, 0, position.z), orientation, obj.getMovementCounter(), obj.getObjectID(), obj.getParentId());
-				ObjControllerMessage objController = new ObjControllerMessage(0x1B, dataTransform);
-				obj.notifyObservers(objController, true);
-			}
+			DataTransform dataTransform = new DataTransform(new Point3D(position.x, position.y, position.z), orientation, obj.getMovementCounter(), obj.getObjectID());
+			ObjControllerMessage objController = new ObjControllerMessage(0x1B, dataTransform);
+			obj.notifyObservers(objController, true);
 			
 		}
-		
+			
 	}
+	
 	// not fully working yet(rotation of meshes wrong)
 	public boolean checkLineOfSight(SWGObject obj1, SWGObject obj2) {
 		

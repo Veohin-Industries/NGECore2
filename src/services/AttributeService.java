@@ -23,6 +23,7 @@ package services;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.mina.core.buffer.SimpleBufferAllocator;
 
@@ -33,6 +34,8 @@ import protocol.swg.AttributeListMessage;
 import engine.resources.objects.SWGObject;
 import engine.resources.service.INetworkDispatch;
 import engine.resources.service.INetworkRemoteEvent;
+
+@SuppressWarnings("unused")
 
 public class AttributeService implements INetworkDispatch {
 
@@ -64,7 +67,7 @@ public class AttributeService implements INetworkDispatch {
 		if(requester.getClient() == null || requester.getClient().getSession() == null)
 			return;
 		
-		AttributeListMessage message = new AttributeListMessage(new HashMap<String, String>(target.getAttributes()), target.getObjectID(), bufferPool);
+		AttributeListMessage message = new AttributeListMessage(target, bufferPool);
 		requester.getClient().getSession().write(message.serialize());
 	}
 
