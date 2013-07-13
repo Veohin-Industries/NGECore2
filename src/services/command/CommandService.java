@@ -77,11 +77,6 @@ public class CommandService implements INetworkDispatch  {
 				if(command == null)
 					return;
 				
-				if(command.getCommandCRC() == CRC.StringtoCRC("giveitem"))
-					System.out.println(commandEnqueue.getCommandArguments());
-				
-				if(command.getCommandCRC() == CRC.StringtoCRC("setgodmode"))
-					System.out.println(commandEnqueue.getCommandArguments());
 				//if(command.getCommandCRC() == CRC.StringtoCRC("transferitemmisc"))
 					//System.out.println(commandEnqueue.getCommandArguments());
 				

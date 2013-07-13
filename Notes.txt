@@ -11,5 +11,7 @@ otherwise it will load default.py radial.
 
 When wanting to reference text for a radial, you can use "@location_of_stf_file" for the string.
 
-
-Updated a ton of RadialOptions, and added Show Character Sheet
+=== Scripting Notes ===
+If there is a module that you want to use other than sys, you must find it inside
+the Lib folder (ex you want to import random: C:\jython\Lib\random.py) and copy and paste it
+into NGECore2\lib\Lib.

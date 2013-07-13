@@ -48,7 +48,7 @@ public class ScriptService {
 	
 	public void callScript(String path, String module, String method, Object arg1) {
 		PythonInterpreter interpreter = new PythonInterpreter();
-		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);	
+		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);				
 		PyObject func = interpreter.get(method);
 		func.__call__(Py.java2py(core), Py.java2py(arg1));
 		interpreter.cleanup();
@@ -64,7 +64,7 @@ public class ScriptService {
 	
 	public void callScript(String path, String method, String module, Object arg1, Object arg2, Object arg3) {
 		PythonInterpreter interpreter = new PythonInterpreter();
-		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);	
+		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);				
 		PyObject func = interpreter.get(method);
 		func.__call__(Py.java2py(arg1), Py.java2py(arg2), Py.java2py(arg3));
 		interpreter.cleanup();
@@ -72,7 +72,7 @@ public class ScriptService {
 
 	public void callScript(String path, String module, String method, Object arg1, Object arg2, Object arg3, Object arg4) {
 		PythonInterpreter interpreter = new PythonInterpreter();
-		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);	
+		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);				
 		PyObject func = interpreter.get(method);
 		func.__call__(Py.java2py(arg1), Py.java2py(arg2), Py.java2py(arg3), Py.java2py(arg4));
 		interpreter.cleanup();
@@ -80,7 +80,7 @@ public class ScriptService {
 	
 	public PyObject getMethod(String path, String module, String method) {
 		PythonInterpreter interpreter = new PythonInterpreter();
-		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);	
+		interpreter.exec("import sys\nsys.path.append('" + path + "')\nfrom " + module + " import " + method);			
 		PyObject func = interpreter.get(method);
 		interpreter.cleanup();
 		return func;

@@ -1,0 +1,2558 @@
+Registered command spatialchatinternal CRC: 2089640916
+Registered command socialinternal CRC: 852433902
+Connected.
+Ossk failed login because Invalid Password
+Ossk failed login because Invalid Password
+Ossk failed login because Invalid Password
+Ossk failed login because Invalid Password
+Ossk failed login because Invalid Password
+import sys
+sys.path.append('scripts/')
+from static_map_locations import addLocations
+java.io.FileNotFoundException: C:\Users\Lewis\Documents\GitHub\NGECore2\.\clientdata (Access is denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at engine.clientdata.IffFile.readFile(ng:48)
+	at engine.clientdata.ClientFileManager.loadFile(bk:225)
+	at engine.resources.objects.SWGObject.getContainerInfo(vb:159)
+	at engine.resources.objects.SWGObject.<init>(vb:90)
+	at resources.objects.staticobject.StaticObject.<init>(StaticObject.java:37)
+	at services.object.ObjectService.createObject(ObjectService.java:154)
+	at services.object.ObjectService.loadSnapshotObjects(ObjectService.java:422)
+	at services.TerrainService.loadSnapShotObjects(TerrainService.java:123)
+	at main.NGECore.start(NGECore.java:180)
+	at main.NGECore.main(NGECore.java:231)
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_carbine_elite import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_radio import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_ration_kit_lg import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_inorganic_minerals import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_ration_kit_m import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_pristine_tatooine_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_pristine_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_pristine_tatooine_large_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_mining_liquid_moisture_harvester import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from banner_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_tent_s5 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_cot_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from campfire_logs_burnt import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_tent_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_crate_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_crate_metal_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_drum_dented_1 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_smoke import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/jawa/')
+from tent_jawa_01_small import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_drum_storage_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_drum_storage_2 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_poi_broken_electronics import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_human_headandbody import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_survey_tool_liquid import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_miasma_of_fog_red import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_survey_gas_sample import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_human_body import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tankfarm_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_tent_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_stool_tall import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from campfire_logs_ash import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_lawn_chair import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_lantern_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/sign/')
+from tatooine_moraj_marker import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_lumpy_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_smooth_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_smooth_tatooine_style_2 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_arch_medium_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_arch_small_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_skinny_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_skinny_tatooine_style_2 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_lumpy_tatooine_style_2 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_smooth_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_mushroom_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_skinny_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_lumpy_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_arch_large_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_spit import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from orchard_tatooine_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from bridge_tatooine_small_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from rock_spire_fin_tatooine import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_04 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_06 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/jawa/')
+from tent_jawa_01_large import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_pristine_tatooine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_pristine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_bazaar import setup
+import sys
+sys.path.append('scripts/object/tangible/crafting/station/')
+from public_structure_station import setup
+import sys
+sys.path.append('scripts/object/tangible/crafting/station/')
+from public_weapon_station import setup
+import sys
+sys.path.append('scripts/object/tangible/crafting/station/')
+from public_food_station import setup
+import sys
+sys.path.append('scripts/object/tangible/crafting/station/')
+from public_clothing_station import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/jawa/')
+from tent_jawa_01_med import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_bench_generic import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_bank import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from bridge_tatooine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_cleft_tatooine_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_watto_junkshop import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_sordaan_hunting_trophy import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_bantha_kash import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_bolotaur import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_katarn import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_kkorrwrot import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_minstyngar import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_mouf import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_uller import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_walluga import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/ep3_rewards/')
+from ep3_kash_reward_trophy_webweaver import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_green_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_blue_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from droids_r2 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_newbie_steam import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_light_s2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_probedroid_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_buzzing_insects_large import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_outpost_guard_tower_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_weak_imperial_16_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_column_weak_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_transformer_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_box_node import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_smoke_small import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_rifle_laser_combined import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_baton_gaderiffi import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_carbine_e11_combined import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_human_head import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_smoke import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_arial_thin import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_poi_droid_weld_sparks import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_free_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_radar_dish import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from capitol_tatooine import setup
+import sys
+sys.path.append('scripts/object/cell/')
+from cell import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tapestry_tatooine import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_plant_potted_lg_s2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from banner_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from coffee_table_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from end_table_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from couch_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from col_force_shui_painting_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_jedi_council_seat import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from end_table_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from dining_table_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from chair_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from cabinet_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_professor_desk import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from chair_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_microphone_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from love_seat_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from bookcase_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/elegant/')
+from chest_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_tbl_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_diagnostic_screen import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_bothan_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_potted_plants_sml_s03 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from couch_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/imperial/')
+from table_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/painting/')
+from bestine_quest_painting import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_desk_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_data_disk import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_datapad_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_document import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_chair_metal_wheeled_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_drink_flask import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_glass_beaker import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_glass_full_s2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_plate_casserole import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_datapad_s2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_decryptor_imperial import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_game_dejarik_gameboard import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tapestry_imperial import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_vibroaxe import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_skull_bol import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_pistol_kyd21 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_bestine_quests_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from searchable_desk_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_plant_potted_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_plant_potted_lg_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_plant_potted_lg_s4 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_imperial import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_endor_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_rug_rectangle_large_style_03 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from coffee_table_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bottle_fat import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bottle_pear import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bottle_tall import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_bowl_serving_full import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_bowl_full import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_tato_bowl_full_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_tato_bowl_full_s02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_plate_s1_full import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_muffins import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_shisha import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tank_bubble import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_desk_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_sm_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from searchable_desk_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_bestine_quests_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_pipe_narrow_2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from antenna_tatt_style_1 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from starport_tatooine import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_space import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_newsnet import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from plant_08 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style01_small import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from chest_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from end_table_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from chair_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from coffee_table_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_small_tube import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_large_tube import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_berries import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_guts import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from cabinet_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from bookcase_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from armoire_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from love_seat_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/cheap/')
+from couch_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_bed_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bowl_shallow import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_cheese_wheel_s1_partial import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_spice_red import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_spice_blue import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bread_loaf import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_bed_sm_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rect_m_s01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style01_large import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_potted_plants_sml_s05 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_agrilat_swamp_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_agrilat_swamp_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_corellia_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_corellia_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_tatooine_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_nemodian_bird_cage import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_lg_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_sm_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_sm_s4 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_decorative_sm_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_potted_plants_sml_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_head_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_oval_m_s02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_greater_krayt_head import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_greater_krayt_spine_medium import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_free_s03 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_candlestick_free_s02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_medical_console import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_ithorian_headandbody import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_computer_toolkit import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_cage_bamboo import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_free_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_tankard_full import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_sensor_frequency_jammer_s2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_head_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_05 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_08 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_wall_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_tiki_torch_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_bith_head import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_portable_stove_sm_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_fruit_melon import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bowl_plain import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_pot_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_bugs import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_oval_sml_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_engine_component import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s8 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_cook_set_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_toolchest_med_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_key_electronic import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_basket_closed import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_basket import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style01_med import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_slave_brazier import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_cantina_droid_detector import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_table_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_table_s03 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_table_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_glass_white import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_glass_metal import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from fanfar import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from slitherhorn import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from kloo_horn import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from traz import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from flute_droopy import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_red_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/crafting/station/')
+from food_station import setup
+import sys
+sys.path.append('scripts/object/tangible/hopper/')
+from crafting_station_ingredient_hopper_1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_pot_style_03 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_pot_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_empty import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_bag_ingredients_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bowl_carved import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from guild_combat_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from guild_commerce_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from guild_university_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_melee_hk_lance import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from association_hall_civilian_tatooine import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from sofa_chair_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from end_table_small_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rect_sml_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tech_console_sectional_a import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tech_console_sectional_b import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_scrolling_screen import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_technical_console_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_wall_s3 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from cantina_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_large_green_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_large_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from campfire_fresh import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_bounty import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_ruined_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_damaged_tatooine_large_style_01 import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from parking_garage_tatooine_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_blue_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from gravestone_generic_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from gravestone_generic_style_04 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from gravestone_generic_style_05 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from gravestone_generic_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from gravestone_generic_style_03 import setup
+NULL first mesh in .lod for: object/tangible/collection/shared_hanging_light_02_01.iff
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from hanging_light_02_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from col_ent_instrument_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tech_console_sectional_c import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_blue_style_01_on import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_barrel_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tech_console_sectional_d import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_cu_pa import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_chair_cafe_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_table_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_outpost_guard_house_imperial import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_base_shed_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_all_impl_corral_64x64_s02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_all_impl_corral_32x32_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_column_strong_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_strong_imperial_32_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_gate_tatooine_wide_style_01 import setup
+NULL first mesh in .lod for: object/building/military/shared_military_base_gate_house_imperial.iff
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_base_gate_house_imperial import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_strong_imperial_16_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from orchard_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from guild_theater_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from table_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rnd_lg_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_glass_empty import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_meat_hunk import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from cloning_facility_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_lemedical_powerdown import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_block_64x16_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from antenna_tatt_style_2 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_block_64x16_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_03 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_meat_rack import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_fruit_stand_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style02_small import setup
+import sys
+sys.path.append('scripts/object/tangible/container/loot/')
+from placable_loot_crate import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from tent_house_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from stone_hovel_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_ruined_tatooine_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_ruined_tatooine_large_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_ruined_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_damaged_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from campfire_burnt import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_bith_headandbody import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from luke_farm_garage import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_newbie_hanging_smoke import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_smoke_large import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_kitchen_chair_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from trash_pile_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_mockup_bank_terminal import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_pistol_dl44_combined import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_lance_vibrolance import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_axe_heavy_duty import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r3_head import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r2_torso import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r3_leg import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_rifle_bowcaster_combined import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_chair_cafe_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_organic_food import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_r5_powerdown import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_tbl_cafe_table_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_cafe_parasol import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_tbl_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_potted_plants_sml_s04 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_cot_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_crate_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_lantern_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_desk_map_table import setup
+import sys
+sys.path.append('scripts/object/tangible/painting/')
+from painting_starmap import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/one_year_anniversary/')
+from painting_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/one_year_anniversary/')
+from painting_05 import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/one_year_anniversary/')
+from painting_09 import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/')
+from data_terminal_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/')
+from frn_vet_x_wing_toy import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/')
+from data_terminal_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/veteran_reward/')
+from frn_vet_tie_fighter_toy import setup
+import sys
+sys.path.append('scripts/object/tangible/food/crafted/')
+from dish_karkan_ribenes import setup
+import sys
+sys.path.append('scripts/object/tangible/food/crafted/')
+from drink_mandalorian_wine import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_bed_sm_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_toolchest_lg_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_basket_shallow import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_bed_lg_s2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_tato_cup_s2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_free_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_rug_rectangle_large_style_05 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from couch_modern_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_tree_potted_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_potted_plants_sml_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from bookcase_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_free_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_candlestick_free_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_pistol_dragoneye import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r2_head import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from armoire_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from bookcase_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from chest_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_tbl_s03 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_crate_spice import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_spice_white import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_plant_tato_falotil import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from campfire_ash import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_plant_tato_falotil_bare import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from armor_composite_helmet import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_rifle_t21_combined import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_instrument_calibrator import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_medic_stimpack import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_newbie_refrigerator_steam import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_droid_toolkit import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_09 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from col_ent_fan_05 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_love_seat_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from bar_piece_curve_s2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_pistol import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_tato_cup_s3 import setup
+import sys
+sys.path.append('scripts/object/tangible/gambling/wheel/')
+from roulette import setup
+import sys
+sys.path.append('scripts/object/tangible/gambling/slot/')
+from standard import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_10 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_pipe_widemouth import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_pipe_dual_unconnected import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from shed_junkshop_watto import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_junkshop_watto import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from debris_tatt_pipe_narrow_1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_painting_naboo_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rect_lg_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from coffee_table_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from cabinet_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_demagnetizer import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from chest_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from cabinet_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_vase_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from end_table_large_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_kitchen_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_jar_funk import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from love_seat_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_table_small_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from armoire_modern_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rect_lg_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_gate_tatooine_style_03 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_block_64x32_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_fruit_stand_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from lucky_despot import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_wall_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/gambling/table/')
+from table_base import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from hospital_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from chair_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_medic_bacta_tank_advanced import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_medic_bacta_tank import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tank_gas import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_s4 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from data_terminal_s3 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_inorganic_gas import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_inorganic_chemicals import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_archway_tatooine_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_block_64x32_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_tatt_style01_07 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_futon_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/technical/')
+from couch_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_oval_lg_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_rug_rectangle_large_style_04 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_rug_rectangle_large_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from stair_tatooine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from droids_r2_waiter import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_chair_cantina_seat_3 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_table_cantina_table_3 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_chair_cantina_seat_2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_table_cantina_table_1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_chair_cantina_seat import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_table_small_style_03 import setup
+NULL first mesh in .lod for: object/tangible/collection/shared_hanging_light_02_05.iff
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from hanging_light_02_05 import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from droids_21b_medical import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_steam_rise import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_glass_bluemilk import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_bacta_ampules import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_21bmedical_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_inorganic_water import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/imperial/')
+from data_terminal_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_meatal_wheeled_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_foot import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from coffee_table_modern_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_hydrospanner import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_katana import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_lg_s2 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_webber import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_rnd_sml_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_tree_potted_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_ottoman_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_gate_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from rug_sqr_m_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tato_vase_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rebel_battle_gloves import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_organic_hide import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_ruined_tatooine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from beam_tatooine_overhead_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from tower_jabbas_palace import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from guild_banner_free_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from guild_statue_free_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from guild_ball_free_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_archway_tatooine_wide_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_crate_clothing_small import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_raw_cloth import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_rifle import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_carbine_dh17 import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from mandoviol import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from fizz import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from fort_tusken import setup
+import sys
+sys.path.append('scripts/object/tangible/dungeon/corellian_corvette/')
+from corvette_search_rebel_assassination_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from beetle_young_cave import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from bank_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_pristine_tatooine_tall_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_mining_liquid_harvester_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_mining_gas_harvester_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_power_generator_wind_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/terrain/tatooine/')
+from poi_sarlacc_collision_floor import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from shuttleport_tatooine import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_free_s04 import setup
+NULL first mesh in .lod for: object/tangible/collection/shared_hanging_light_01.iff
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from hanging_light_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from palette_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_rebel import setup
+import sys
+sys.path.append('scripts/object/tangible/dungeon/corellian_corvette/')
+from corvette_search_imperial_assassination_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from col_ent_instrument_03 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from hotel_tatooine_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/tatooine/')
+from frn_tatt_table_cantina_table_2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_energy_gas import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_energy_liquid import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_mining_ore_harvester_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_power_generator_solar_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_power_generator_photo_bio_style_1 import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/static/vehicle/')
+from player_shuttle import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from stair_tatooine_large_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from flower_06 import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_imperial_detachment_hq import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_power_generator_fusion_style_1 import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_base_shed_imperial_barracks_s01 import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_base_shed_imperial_style_officer_s01 import setup
+import sys
+sys.path.append('scripts/object/static/vehicle/')
+from static_lambda_shuttle import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_med_imperial_32_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_med_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_column_med_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_armor import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_weapons import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_arial_prime import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from tato_imprv_bannerpole_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from tato_imprv_flagpole_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from streetsign_upright_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_rug_rectangle_large_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_basket_frame import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_items_container_lg import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_newbie_crate import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_pitcher_full import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_organic_container import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_r4_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_lance_vibroaxe import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_lance_staff_wood_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_carbine_dh17_combined import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_sword_vibroblade import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_recording_rod import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_engineering_datapad import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_electronics import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_droid_magnet import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_r2_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r4_leg import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_engine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_powerdroidleg import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_protocolarm import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_powerdroid_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from atst_debris_01 import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_chemical_container_lg import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_storage_cabinet_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tapestry_rebel import setup
+NULL first mesh in .lod for: object/tangible/collection/shared_hanging_light_02_09.iff
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from hanging_light_02_09 import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from bridge_tatooine_small_style_03 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from planter_generic_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_flower_tato_funnel_med import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_flower_tato_funnel import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_flower_tato_funnel_sm import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from potted_plant_flowers_orange import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from potted_plant_flowers_purple import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from plant_01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from filler_building_slave_quarters_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from beam_tatooine_overhead_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from wall_gate_tatooine_style_02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_metal_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from shock_trooper_left_bracer import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_strong_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_rifle_darklighter_sg_82 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from pillar_pristine_tall_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_bush_yavin_blueleaf import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_bush_endor_rainbowbush import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_tree_palm_thk import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_tree_palm_sm import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_weak_imperial_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_conduit import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_kitchen_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_upholstered_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_small_chunk import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_storage import setup
+NULL first mesh in .lod for: object/building/tatooine/shared_parking_garage_tatooine_style_1.iff
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_turbolaser import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from debris_deathstar_tractorbeam import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_ithorian_head import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_tree_tato_touchnot import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from bench_generic_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_ryyk_blade import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from shock_trooper_right_bracer import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_plant_tato_hubba import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_flower_endor_scrubwort import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from planter_hanging_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from planter_window_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_bush_talus_razorcoil import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_mining_ore_harvester_style_2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_arm_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_arm_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_leg_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_leg_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_tail import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_krayt_ribcage import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_divan_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_chair_recliner_s1 import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_plant_tato_pika import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_plant_tato_pika_tri import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_rocket_launcher import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_ammo_rocket import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from armor_bone_helmet import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from armor_chitin_chestplate import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from armor_composite_chestplate import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from escape_pod import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from escape_pod_door import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_greater_krayt_spine_large import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from skeleton_greater_krayt_spine_small import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_energy_radioactive import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_energy_solid import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from cloning_facility_tatooine_small import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_starport import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from luke_farm_dome import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from lucky_despot_debris_nose_cone import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from lucky_despot_debris_sm_engine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s2 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s5 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_lg_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_medic_bag import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from poi_tosche_station import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_pistol_blackfalcon import setup
+import sys
+sys.path.append('scripts/object/static/vehicle/')
+from static_speeder_bike import setup
+import sys
+sys.path.append('scripts/object/tangible/component/vehicle/')
+from mass_driver import setup
+import sys
+sys.path.append('scripts/object/static/vehicle/e3/')
+from landspeeder import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from poi_darklighter_estate import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_medcenter import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_bank import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_cantina import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_cloning import setup
+import sys
+sys.path.append('scripts/object/static/worldbuilding/sign/')
+from thm_sign_garage import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_rack_spears import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_rifle_adventurer import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_rifle_tusken_combined import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_tree_palm_fngi import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from landing_pad_shuttle import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s6 import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_connector import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from scout_trooper_chest import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from all_sign_street_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from lucky_despot_debris_lg_engine_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_bestine_quests_03 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from lucky_despot_debris_md_engine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s3 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_tato_tent_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from banner_rebel_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_column_strong_rebel_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_strong_rebl_16_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from military_wall_strong_rebl_32_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r5_head import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tie_bomber_debris_01 import setup
+import sys
+sys.path.append('scripts/object/building/player/')
+from player_house_tatooine_small_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from sandcrawler_destroyed import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from sandcrawler_debris_02 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_campfire_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from particle_newbie_bombed_spot import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_dewback import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_stunned_player import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_eopie import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_worrt import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_dye_kit import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_bag_sm import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_assorted_fruit import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_vegetable_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_vegetable_s02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_vegetable_s03 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_fruit_s03 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_fruit_s01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_water import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_sewing_utensils import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_green_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from hospital_tatooine_s02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_green_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_red_style_01 import setup
+import sys
+sys.path.append('scripts/object/building/general/')
+from ranchers_house_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/naboo/')
+from fountain_naboo_style_1 import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endor_lake_platform import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endor_lake_platform_cap import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_fence_8m import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_fence_4m import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endr_lake_rail8m import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endr_lake_rail4m import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endr_lake_rail2m import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_bantha_saddle import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_bantha_nosaddle import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_decd_scorched_tallbirch_broke import setup
+import sys
+sys.path.append('scripts/object/static/flora/')
+from flora_tree_lok_mkpud import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_style_02_on import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from bar_piece_curve_s1 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_microphone_s2 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_red_ball_jet_organ import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_speaker import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_food_dish_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_winebottle_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_winebottle_02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_winebottle_03 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_con_winebottle_04 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_red_style_02 import setup
+import sys
+sys.path.append('scripts/object/building/general/')
+from tatooine_hutt_cave import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_melee_gamorrean_axe import setup
+import sys
+sys.path.append('scripts/object/building/general/')
+from tatooine_tusken_bunker import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_small_red_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_large_blue_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_medium_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_r3_powerdown import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_cot import setup
+import sys
+sys.path.append('scripts/object/tangible/npc/tatooine_special/')
+from sarlacc import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_scout import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_entertainer import setup
+import sys
+sys.path.append('scripts/object/tangible/terminal/')
+from terminal_mission_artisan import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_cheap_cabinet_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_carbine_laser import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_sclpt_stuffed_bantha import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_omni_box import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s7 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from campfire_smoldering import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from military_base_shed_rebel_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_banner_govt_angled_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_power_bubble_node import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_banner_govt_tall_s01 import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_jawa import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_rock_large import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_rock_med import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from sandcrawler_debris_01 import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_burning_smokeandembers_large import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_droideka_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_sparks_small import setup
+import sys
+sys.path.append('scripts/object/building/general/')
+from tatooine_beetle_cave import setup
+import sys
+sys.path.append('scripts/object/tangible/collection/')
+from rare_melee_blksn_razor import setup
+import sys
+sys.path.append('scripts/object/tangible/jedi/')
+from force_shrine_stone import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_jedi_temple_pillar_sm import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_jedi_temple_pillar_base import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_jedi_temple_altar import setup
+import sys
+sys.path.append('scripts/object/static/particle/')
+from pt_poi_electricity_2x2 import setup
+import sys
+sys.path.append('scripts/object/static/creature/')
+from tatooine_ronto import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style02_med import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_couch_sm_s1 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from housing_tatt_style03_med import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from stair_tatooine_small_style_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from palette_supply_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from palette_supply_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from prp_junk_s4 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_all_obelisk_s01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from merchant_tent_tato_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/tatooine/')
+from concrete_slab_tatooine_16x8 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_tato_corral_pen_16x8_s01 import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from salon_tatooine import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from palette_supply_03 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_tato_corral_half_32x32_s03 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from allum_mine_pipes_s02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from allum_mine_pipes_s01 import setup
+import sys
+sys.path.append('scripts/object/building/general/')
+from arena_general import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from allum_mine_bucket_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from allum_mine_car_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from atat_debris_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from atat_debris_02 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from camp_cot_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from camp_lawn_chair_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from camp_stool_short_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from camp_stool_tall_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from repairdroidhead import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from repairdroidtorso import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_all_construction_stone_pile import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_4lom_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from droid_ra7_powerdown import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from palette_supply_04 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from palette_supply_05 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r2_leg import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r3_torso import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r4_head import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r4_torso import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r5_leg import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_chair_tato_cafe_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/military/')
+from bunker_crate_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_skull_lizard import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from streetlamp_large_blue_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_stalactite_med import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_stalagmite_large import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_stalagmite_med import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from skeleton_ancient_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from distant_ship_controller2 import setup
+import sys
+sys.path.append('scripts/object/tangible/gravestone/')
+from gravestone03 import setup
+import sys
+sys.path.append('scripts/object/tangible/gravestone/')
+from gravestone01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_stalagmite_tiny import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_axe import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from wp_mle_sword_s01 import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_cooking_stone import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_drum import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_music_gong_stick import setup
+import sys
+sys.path.append('scripts/object/building/endor/')
+from endor_tiki_torch import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from all_banner_generic_s02 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_lamp_candlestick_tbl_s02 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_container_organic_structure import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_fire_pit import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from r5_torso import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from poi_protocolleg import setup
+import sys
+sys.path.append('scripts/object/static/structure/corellia/')
+from corl_fountain_circle_s01 import setup
+import sys
+sys.path.append('scripts/object/tangible/sign/')
+from streetsign_upright_style_01 import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_briefcase import setup
+import sys
+sys.path.append('scripts/object/building/military/')
+from outpost_shed import setup
+import sys
+sys.path.append('scripts/object/tangible/camp/')
+from camp_stool_short import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_turbine_generator import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_meson_taloscope import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_power_output_analyzer import setup
+import sys
+sys.path.append('scripts/object/static/installation/')
+from mockup_factory_organic_style_1 import setup
+import sys
+sys.path.append('scripts/object/static/structure/general/')
+from tato_cave_stalagmite_small import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_repair_melee_kit import setup
+import sys
+sys.path.append('scripts/object/static/item/')
+from item_tool_tools import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/all/')
+from frn_all_data_terminal_free_s1 import setup
+import sys
+sys.path.append('scripts/object/tangible/furniture/modern/')
+from bar_piece_straight_s2 import setup
+import sys
+sys.path.append('scripts/object/tangible/speaker/')
+from speaker import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from bandfill import setup
+import sys
+sys.path.append('scripts/object/tangible/microphone/')
+from microphone import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from ommni_box import setup
+import sys
+sys.path.append('scripts/object/tangible/instrument/')
+from nalargon import setup
+import sys
+sys.path.append('scripts/object/static/structure/dantooine/')
+from dant_boundary_post import setup
+import sys
+sys.path.append('scripts/object/building/tatooine/')
+from guild_university_tatooine_style_02 import setup
+Registered command opencontainer CRC: 1880585606
+Registered command transferitem CRC: 1023100061
+Registered command transferitemarmor CRC: 410152097
+Registered command transferitemweapon CRC: 861304519
+Registered command transferitemmisc CRC: -2097718921
+Registered command equip CRC: 1261724132
+Registered command prone CRC: -1114832209
+Registered command stand CRC: -1465754503
+Registered command sitserver CRC: -1223034330
+Registered command kneel CRC: 28609318
+Registered command serverdestroyobject CRC: -407976709
+Registered command giveitem CRC: -1959338616
+Registered command object CRC: -1486882069
+Registered command getattributesbatch CRC: 373641455
+Registered command setgodmode CRC: 1823472998
+Commands registered...
+import sys
+sys.path.append('scripts/object/guild/')
+from guild_object import setup
+Started Server.
