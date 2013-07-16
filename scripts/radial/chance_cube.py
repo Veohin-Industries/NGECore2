@@ -1,4 +1,5 @@
 from resources.common import RadialOptions
+from resources.objects.player import PlayerObject
 
 import sys
 import random

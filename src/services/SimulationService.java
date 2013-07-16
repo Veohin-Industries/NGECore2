@@ -49,7 +49,6 @@ import engine.resources.scene.Quaternion;
 import engine.resources.scene.quadtree.QuadTree;
 import engine.resources.service.INetworkDispatch;
 import engine.resources.service.INetworkRemoteEvent;
-
 import protocol.swg.CmdStartScene;
 import protocol.swg.HeartBeatMessage;
 import protocol.swg.ObjControllerMessage;
@@ -59,7 +58,6 @@ import protocol.swg.UpdateTransformWithParentMessage;
 import protocol.swg.objectControllerObjects.DataTransform;
 import protocol.swg.objectControllerObjects.DataTransformWithParent;
 import protocol.swg.objectControllerObjects.TargetUpdate;
-
 import resources.objects.cell.CellObject;
 import resources.objects.creature.CreatureObject;
 import resources.common.*;
@@ -70,8 +68,7 @@ import wblut.geom.WB_Point3d;
 import wblut.geom.WB_Ray;
 import wblut.geom.WB_Transform;
 import wblut.hemesh.HE_Mesh;
-
-@SuppressWarnings("unused")
+import resources.objects.waypoint.WaypointObject;
 
 public class SimulationService implements INetworkDispatch {
 	
@@ -110,6 +107,9 @@ public class SimulationService implements INetworkDispatch {
 		core.commandService.registerCommand("object");
 		core.commandService.registerCommand("getattributesbatch");
 		core.commandService.registerCommand("setgodmode");
+		core.commandService.registerCommand("admin");
+		core.commandService.registerCommand("waypoint");
+		core.commandService.registerCommand("tip");
 		System.out.println("Commands registered...");
 		
 	}
