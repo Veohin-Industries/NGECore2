@@ -93,7 +93,9 @@ public class CommandService implements INetworkDispatch  {
 				
 				//if(target == null)
 					//System.out.println("NULL Target");
+				
 				core.scriptService.callScript("scripts/commands/", command.getCommandName(), "run", core, actor, target, commandEnqueue.getCommandArguments());
+				
 			}
 			
 			
@@ -106,7 +108,6 @@ public class CommandService implements INetworkDispatch  {
 		
 		BaseSWGCommand command = new BaseSWGCommand(name);
 		commandLookup.add(command);
-		System.out.println("Registered command " + command.getCommandName() + " CRC: "+ command.getCommandCRC());
 	}
 
 	public BaseSWGCommand getCommandByCRC(int CRC) {

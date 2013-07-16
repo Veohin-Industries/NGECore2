@@ -4,6 +4,7 @@ def addLocations(core, planet):
 	
 	if planet.getName() == 'tatooine':
 		tatooineLocations(core, planet)
+	
 		
 def tatooineLocations(core, planet):
 
@@ -18,4 +19,5 @@ def tatooineLocations(core, planet):
 	mapService.addLocation(planet, 'Mos Eisley', 3528, -4804, 17, 0, 0)
 	mapService.addLocation(planet, 'Anchorhead', 40, -5348, 17, 0, 0)
 
+	
 	
