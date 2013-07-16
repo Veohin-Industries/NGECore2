@@ -17,7 +17,7 @@ def run(core, actor, target, commandString):
         currentTarget = core.objectService.getObject(target.getObjectId())
         
         if int(tipAmount) > 0 and int(tipAmount) <= 1000000:
-            if actorFunds >= tipAmount:
+            if actorFunds >= int(tipAmount):
                 
                 currentTarget.setCashCredits(int(tipAmount))       
                 actor.setCashCredits(actorFunds - int(tipAmount))
@@ -25,9 +25,9 @@ def run(core, actor, target, commandString):
                 currentTarget.sendSystemMessage(actor.getCustomName() + ' tips you ' + tipAmount + ' credits.', 0)
                 actor.sendSystemMessage('You successfully tip ' + tipAmount + ' credits to ' + currentTarget.getCustomName() + '.', 0)
                 return
-            actor.sendSystemMessage('You lack the cash funds to tip ' + tipAmount + ' credits to ' + currentTarget.getCustomName() + '.')
+            actor.sendSystemMessage('You lack the cash funds to tip ' + tipAmount + ' credits to ' + currentTarget.getCustomName() + '.', 0)
             return
-        actor.sendSystemMessage('Invalid tip amount, set amount between 1 and 1,000,000')             
+        actor.sendSystemMessage('Invalid tip amount, set amount between 1 and 1,000,000', 0)             
         return
     #/tip Waverunner 30000000 bank  <<<tip amnt to bank, send mail
     if commandLength == 2: #place holder for mail

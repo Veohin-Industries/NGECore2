@@ -46,5 +46,11 @@ def run(core, actor, target, commandString):
         currentCredits = actor.getCashCredits()
         newAmount = currentCredits + wantedAmount
         actor.setCashCredits(newAmount)
-        actor.sendSystemMessage('Gave you ' + str(wantedAmount) + ' extra credits, scum', 0) 
+        actor.sendSystemMessage('Gave you ' + str(wantedAmount) + ' extra credits, scum', 0)
+        
+    if commandString.startswith('faction'):
+        actor.sendSystemMessage('Removed you from the ' + actor.getFaction(), 0)
+        actor.setFaction('imperial')
+        actor.setFactionStatus(1)
+        actor.sendSystemMessage('Welcome to the Empire.', 0)
     return
