@@ -154,7 +154,7 @@ public class ObjectService implements INetworkDispatch {
 			
 		} else if(Template.startsWith("object/guild")) {
 			
-			object = new GuildObject(objectID, planet, position, orientation, Template);
+			object = new GuildObject(core, objectID, planet, position, orientation, Template);
 			
 		} else {
 			
