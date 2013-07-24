@@ -49,6 +49,8 @@ public class ObjControllerMessage extends SWGMessage {
 	public static final int POSTURE = 0x0131;
 	public static final int SIT_ON_OBJECT = 0x013B;
 	public static final int OBJECT_MENU_RESPONSE = 0x0147;
+	public static final int BIOGRAPHY_UPDATE = 0x01DB;
+	public static final int SECURE_TRADE = 0x0115;
 
 	public ObjControllerMessage() { 
 		
@@ -74,6 +76,7 @@ public class ObjControllerMessage extends SWGMessage {
 		buffer.put(objControllerObject.serialize());
 		
 		int size = buffer.position();
+		System.out.println("ObjControllerMessage: " + IoBuffer.allocate(size).put(buffer.array(), 0, size).flip().getHexDump());
 		return IoBuffer.allocate(size).put(buffer.array(), 0, size).flip();
 	}
 	

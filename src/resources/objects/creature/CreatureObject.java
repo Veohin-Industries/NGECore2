@@ -35,12 +35,14 @@ import protocol.swg.objectControllerObjects.Posture;
 
 
 
+
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.Transaction;
 import com.sleepycat.persist.model.Entity;
 import com.sleepycat.persist.model.NotPersistent;
 
 import engine.clients.Client;
+import engine.resources.common.CRC;
 import engine.resources.objects.Buff;
 import engine.resources.objects.IPersistent;
 import engine.resources.objects.MissionCriticalObject;
@@ -49,7 +51,6 @@ import engine.resources.objects.SkillMod;
 import engine.resources.scene.Planet;
 import engine.resources.scene.Point3D;
 import engine.resources.scene.Quaternion;
-
 import resources.objects.tangible.TangibleObject;
 import resources.objects.weapon.WeaponObject;
 
@@ -773,8 +774,25 @@ public class CreatureObject extends SWGObject implements IPersistent {
 		UpdatePostureMessage upm = new UpdatePostureMessage(getObjectID(), (byte) 0);
 		destination.getSession().write(upm.serialize());
 		if(destination != getClient()) {
-			UpdatePVPStatusMessage upvpm = new UpdatePVPStatusMessage(getObjectID(), 55);
-			destination.getSession().write(upvpm.serialize());
+			
+			if (factionStatus == 2 || faction == "imperial") {
+
+				UpdatePVPStatusMessage upvpm = new UpdatePVPStatusMessage(getObjectID(), 52, CRC.StringtoCRC("Imperial"));
+				
+				destination.getSession().write(upvpm.serialize());
+			}
+			
+			if (factionStatus == 2 || faction == "rebel") {
+				UpdatePVPStatusMessage upvpm = new UpdatePVPStatusMessage(getObjectID(), 52, CRC.StringtoCRC("Rebel"));
+				
+				destination.getSession().write(upvpm.serialize());
+			}
+			else {
+				UpdatePVPStatusMessage upvpm = new UpdatePVPStatusMessage(getObjectID(), 16, 0);
+				
+				destination.getSession().write(upvpm.serialize());
+			}
+			
 		}
 		
 

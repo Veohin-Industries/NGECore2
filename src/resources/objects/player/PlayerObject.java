@@ -26,6 +26,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.mina.core.buffer.IoBuffer;
+
 import resources.objects.waypoint.WaypointObject;
 
 import com.sleepycat.persist.model.NotPersistent;
@@ -112,6 +114,7 @@ public class PlayerObject extends SWGObject {
 	@NotPersistent
 	private PlayerMessageBuilder messageBuilder;
 	
+	protected String biography;
 	
 	
 	public PlayerObject() {
@@ -134,6 +137,10 @@ public class PlayerObject extends SWGObject {
 		synchronized(objectMutex) {
 			this.title = title;
 		}
+		
+		IoBuffer titleDelta = messageBuilder.buildTitleDelta(title);
+		
+		notifyObservers(titleDelta, true);
 	}
 
 	public String getProfession() {
@@ -189,6 +196,18 @@ public class PlayerObject extends SWGObject {
 	public void setHome(String home) {
 		synchronized(objectMutex) {
 			this.home = home;
+		}
+	}
+	
+	public String getBiography() {
+		synchronized(objectMutex) {
+			return biography;
+		}
+	}
+	
+	public void setBiography(String biography) {
+		synchronized(objectMutex) {
+			this.biography = biography;
 		}
 	}
 

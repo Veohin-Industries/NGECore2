@@ -124,7 +124,7 @@ public class SUIWindow {
 		}
 		
 		component.getWideParams().add(value);
-		
+		System.out.println(component);
 		components.add(component);
 		
 	}

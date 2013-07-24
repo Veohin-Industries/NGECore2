@@ -125,7 +125,7 @@ public class NGECore {
 		// Database
 		databaseConnection = new DatabaseConnection();
 		databaseConnection.connect(config.getString("DB.URL"), config.getString("DB.NAME"), config.getString("DB.USER"), config.getString("DB.PASS"), "postgresql");
-		
+		System.out.println("Connected to database.");
 		databaseConnection2 = new DatabaseConnection();
 
 		creatureODB = new ObjectDatabase("creature", true, false, true);
@@ -157,28 +157,53 @@ public class NGECore {
 		// Login Server
 		loginDispatch = new NetworkDispatch(this, false);
 		loginDispatch.addService(loginService);
+		System.out.println("Added login service");
+		try {
+			loginServer = new MINAServer(loginDispatch, config.getInt("LOGIN.PORT"));
+			loginServer.start();			
+		}
 		
-		loginServer = new MINAServer(loginDispatch, config.getInt("LOGIN.PORT"));
-		loginServer.start();
-		
-		// Zone Server
-		zoneDispatch = new NetworkDispatch(this, true);
-		zoneDispatch.addService(connectionService);
-		zoneDispatch.addService(characterService);
-		zoneDispatch.addService(objectService);
-		zoneDispatch.addService(commandService);
-		zoneDispatch.addService(chatService);
-		zoneDispatch.addService(suiService);
-		zoneDispatch.addService(mapService);
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 
-		zoneServer = new MINAServer(zoneDispatch, config.getInt("ZONE.PORT"));
-		zoneServer.start();
+		System.out.println("Starting login server");
+		// Zone Server
+		try {
+			zoneDispatch = new NetworkDispatch(this, true);
+			zoneDispatch.addService(connectionService);
+			System.out.println("Starting connection service");
+			zoneDispatch.addService(characterService);
+			System.out.println("Starting character service");
+			zoneDispatch.addService(objectService);
+			System.out.println("Starting object service");
+			zoneDispatch.addService(commandService);
+			System.out.println("Starting command service");
+			zoneDispatch.addService(chatService);
+			System.out.println("Starting chat service");
+			zoneDispatch.addService(suiService);
+			System.out.println("Starting sui service");
+			zoneDispatch.addService(mapService);
+			System.out.println("Starting map service");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+			zoneServer = new MINAServer(zoneDispatch, config.getInt("ZONE.PORT"));
+			zoneServer.start();
+		}
 		
+		catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		System.out.println("Started zone server.");
 		// Planets
 		terrainService.addPlanet(1, "tatooine", "terrain/tatooine.trn", true);
-		
+		System.out.println("Added planet.");
 		terrainService.loadSnapShotObjects();
-		
+		System.out.println("Loaded snapshot Objects");
 		// Zone services that need to be loaded after the above
 		simulationService = new SimulationService(this);
 		zoneDispatch.addService(simulationService);
@@ -227,9 +252,14 @@ public class NGECore {
 	public static void main(String[] args) {
 		
 		NGECore core = new NGECore();
+		try {
+			core.start();
+		}
 		
-		core.start();
-		
+		catch (Exception e)
+		{
+			System.out.println(e.toString());
+		}
 		do {
 			if (didServerCrash) {
 				core.restart();

@@ -43,8 +43,11 @@ import engine.resources.scene.Point3D;
 import engine.resources.service.INetworkDispatch;
 import engine.resources.service.INetworkRemoteEvent;
 import resources.common.*;
-
+import resources.objects.creature.CreatureObject;
+import resources.objects.player.PlayerObject;
+import protocol.swg.ChatAddFriend;
 import protocol.swg.ChatDeletePersistentMessage;
+import protocol.swg.ChatFriendsListUpdate;
 import protocol.swg.ChatInstantMessageToCharacter;
 import protocol.swg.ChatInstantMessagetoClient;
 import protocol.swg.ChatOnSendInstantMessage;
@@ -53,6 +56,7 @@ import protocol.swg.ChatPersistentMessageToClient;
 import protocol.swg.ChatPersistentMessageToServer;
 import protocol.swg.ChatRequestPersistentMessage;
 import protocol.swg.ObjControllerMessage;
+import protocol.swg.objectControllerObjects.BiographyUpdate;
 import protocol.swg.objectControllerObjects.PlayerEmote;
 import protocol.swg.objectControllerObjects.SpatialChat;
 import main.NGECore;
@@ -307,6 +311,34 @@ public class ChatService implements INetworkDispatch {
 			}
 
 		});
+		
+		swgOpcodes.put(Opcodes.ChatAddFriend, new INetworkRemoteEvent() {
+
+			@Override
+			public void handlePacket(IoSession session, IoBuffer data) throws Exception {
+				System.out.println("Recieved opcode");
+				data = data.order(ByteOrder.LITTLE_ENDIAN);
+				data.position(0);
+				
+				ChatAddFriend packet = new ChatAddFriend();
+				packet.deserialize(data);
+				
+				Client client = core.getClient((Integer) session.getAttribute("connectionId"));
+				
+				if(client == null)
+					return;
+				
+				CreatureObject creature = (CreatureObject) core.objectService.getObjectByCustomName(packet.getCreatorName());
+				PlayerObject player = (PlayerObject) creature.getSlottedObject("ghost");
+				player.getFriendList().add(packet.getAddedName());
+				System.out.println("Added " + packet.getAddedName());
+				
+				ChatFriendsListUpdate friendsUpdate = new ChatFriendsListUpdate(packet.getAddedName(), (byte) 1);
+				session.write(friendsUpdate.serialize());
+
+			} 
+			
+		});
 
 	}
 	
@@ -344,7 +376,7 @@ public class ChatService implements INetworkDispatch {
 		
 		ChatPersistentMessageToClient msg = new ChatPersistentMessageToClient(mail.getSenderName(), config.getString("GALAXY_NAME"), mail.getMailId()
 				,(byte) 0, mail.getMessage(), mail.getSubject(), mail.getStatus(), mail.getTimeStamp());
-		
+
 		client.getSession().write(msg.serialize());
 	}
 

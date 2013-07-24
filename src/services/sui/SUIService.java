@@ -245,9 +245,9 @@ public class SUIService implements INetworkDispatch {
 		for(String string : data) {
 			
 			window.addDataItem("List.dataList:Name", String.valueOf(index));
-			
+			System.out.println("addDataItem: List.dataList:Name" + String.valueOf(index));
 			window.setProperty("List.dataList" + index + ":Text", string);
-
+			System.out.println("setProperty: List.dataList" + index + ":Text");
 			++index;
 			
 		}

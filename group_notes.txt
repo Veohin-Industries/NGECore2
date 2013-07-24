@@ -1,0 +1,45 @@
+=== Group work ====
+
+
+05 00 
+0C 5F A7 68              // BaselineMessage
+65 EE 47 95 25 00 00 00  // Group ID
+50 55 52 47 03           // PURG 3
+25 00 00 00 			// size
+04 00 
+00 00 80 3F 
+0F 00                    // string count
+73 74 72 69 6E 67 5F 69  // string_i
+64 5F 74 61 62 6C 65     // d_table
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 
+
+
+===PLAY08 PSWG DUMP===
+05 00 
+0C 5F A7 68 // objmessage
+F3 5A 54 E1 20 AB FF B6 // objID
+59 41 4C 50 // PLAY
+08 // PLAY 08
+54 00 00 00 // size
+09 00 00 00 // opcount ??????
+00 00 00 00 // xp list
+00 00 00 00  // xp list 2
+00 00 00 00 // wp list
+00 00 64 00 // force power
+00 00 64 00 // max fp
+00 00 00 00 // 1
+00 00 00 00 // 2
+00 00 00 00 // 3
+00 00 00 00 // 4
+00 00 00 00 // 5
+00 00 00 00 // 6
+00 00 00 00 // 7
+00 00 1C 00 63 6C 61 73 73 5F 73 6D 75 67 67 6C 65 72 5F 70 68 61 73 65 31 5F 6E 6F 76 69 63 65 // wheel position
+
+
+
+
+	the main thing with a SWGList, is that you need to know the "sectionID" of where it's located in the baseline. then you need to make sure the "sendListDeltas" function catches that sectionID and sends the list as part of the right delta

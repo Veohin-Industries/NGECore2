@@ -104,7 +104,7 @@ public abstract class Message {
 		}
 		
 		buffer.position(bufferPosition + length);
-		
+
 		return result;
 		
 	}

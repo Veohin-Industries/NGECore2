@@ -31,10 +31,12 @@ public class UpdatePVPStatusMessage extends SWGMessage {
 	
 	private long objectId;
 	private int pvpStatus;
+	private int factionCRC;
 	
-	public UpdatePVPStatusMessage(long objectId, int pvpStatus) {
+	public UpdatePVPStatusMessage(long objectId, int pvpStatus, int factionCRC) {
 		this.objectId = objectId;
 		this.pvpStatus = pvpStatus;
+		this.factionCRC = factionCRC;
 	}
 	
 	public void deserialize(IoBuffer data) {
@@ -47,9 +49,15 @@ public class UpdatePVPStatusMessage extends SWGMessage {
 		result.putShort((short)4);
 		result.putInt(0x08A1C126);
 		result.putInt(pvpStatus);
-		result.putInt(0); 			// faction crc
+		result.putInt(factionCRC); // faction crc
 		result.putLong(objectId);
 		result.flip();
 		return result;
+	}
+	
+	public enum faction {;
+		public static final int Neutral = 0;
+		public static final int Rebel = 0x16148850;
+		public static final int Imperial = 0xDB4ACC54;
 	}
 }

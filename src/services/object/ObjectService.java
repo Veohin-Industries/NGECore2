@@ -32,6 +32,7 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.atomic.AtomicLong;
+
 import resources.common.*;
 
 import org.apache.mina.core.buffer.IoBuffer;
@@ -41,13 +42,13 @@ import org.python.core.PyObject;
 
 import com.sleepycat.persist.EntityCursor;
 
+import protocol.swg.ChatFriendsListUpdate;
 import protocol.swg.CmdSceneReady;
 import protocol.swg.CmdStartScene;
 import protocol.swg.HeartBeatMessage;
 import protocol.swg.ParametersMessage;
 import protocol.swg.SelectCharacter;
 import protocol.swg.UnkByteFlag;
-
 import engine.clientdata.ClientFileManager;
 import engine.clientdata.visitors.CrcStringTableVisitor;
 import engine.clientdata.visitors.WorldSnapshotVisitor;
@@ -62,9 +63,7 @@ import engine.resources.scene.Point3D;
 import engine.resources.scene.Quaternion;
 import engine.resources.service.INetworkDispatch;
 import engine.resources.service.INetworkRemoteEvent;
-
 import main.NGECore;
-
 import resources.objects.building.BuildingObject;
 import resources.objects.cell.CellObject;
 import resources.objects.creature.CreatureObject;
@@ -390,6 +389,9 @@ public class ObjectService implements INetworkDispatch {
 				//session.write(parameters.serialize());
 
 				core.chatService.loadMailHeaders(client);
+				
+				//ChatFriendsListUpdate friendsUpdate = new ChatFriendsListUpdate(creature.getCustomName(), (byte) 1);
+				//session.write(friendsUpdate.serialize());
 				
 				HeartBeatMessage heartBeat = new HeartBeatMessage();
 				session.write(heartBeat.serialize());

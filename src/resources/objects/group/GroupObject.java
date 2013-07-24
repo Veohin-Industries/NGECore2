@@ -23,6 +23,7 @@ package resources.objects.group;
 
 import java.util.Vector;
 
+import resources.objects.SWGList;
 import engine.clients.Client;
 import engine.resources.objects.SWGObject;
 import engine.resources.scene.Point3D;
@@ -32,11 +33,18 @@ import engine.resources.scene.Quaternion;
 public class GroupObject extends SWGObject {
 	
 	private Vector<SWGObject> memberList = new Vector<SWGObject>();
+	//private SWGList<SWGObject> memberList = new SWGList<SWGObject>();
 	private int memberListUpdateCounter;
 	private SWGObject groupLeader;
 	private SWGObject lootMaster;
 	private short groupLevel;
 	private int lootMode;
+	private int STFSpacer = 0;
+	private int volume = 0;
+	private String STFFile = "string_id_table";
+	private String STFName = "";
+	private String customName = "";
+	private String unkAsciiString = "";
 	
 	public GroupObject(long objectId) {
 		super(objectId, null, new Point3D(0, 0, 0), new Quaternion(0, 0, 0, 1), "object/group/shared_group_object.iff");
@@ -106,6 +114,66 @@ public class GroupObject extends SWGObject {
 		}
 	}
 
+	public int getSTFSpacer() {
+		synchronized(objectMutex) {
+			return STFSpacer;
+		}
+	}
+	
+	public void setSTFSpacer(int STFSpacer) {
+		synchronized(objectMutex) {
+			this.STFSpacer = STFSpacer;
+		}
+	}
+	
+	public String getSTFFile() {
+		synchronized(objectMutex) {
+			return STFFile;
+		}
+	}
+	
+	public void setSTFFile(String STFFile) {
+		synchronized(objectMutex) {
+			this.STFFile = STFFile;
+		}
+	}
+	
+	public String getCustomName() {
+		synchronized(objectMutex) {
+			return customName;
+		}
+	}
+	
+	public void setCustomName(String customName) {
+		synchronized(objectMutex) {
+			this.customName = customName;
+		}
+	}
+	
+	public int getVolume() {
+		synchronized(objectMutex) {
+			return volume;
+		}
+	}
+	
+	public void setVolume(int volume) {
+		synchronized(objectMutex) {
+			this.volume = volume;
+		}
+	}
+	
+	public void setUnkAsciiString(String unkAsciiString) {
+		synchronized(objectMutex) {
+			this.unkAsciiString = unkAsciiString;
+		}
+	}
+	
+	public String getUnkAsciiString() {
+		synchronized(objectMutex) {
+			return unkAsciiString;
+		}
+	}
+	
 	@Override
 	public void sendBaselines(Client client) {
 		// TODO Auto-generated method stub

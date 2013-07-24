@@ -36,6 +36,7 @@ public class UnknownObjController extends ObjControllerObject {
 	}
 	
 	public IoBuffer serialize() {
+		System.out.println("Unknown Obj Controller");
 		return IoBuffer.allocate(0);
 	}
 }

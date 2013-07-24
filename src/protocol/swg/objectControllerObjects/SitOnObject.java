@@ -59,7 +59,7 @@ public class SitOnObject extends ObjControllerObject {
 		result.putFloat(x);
 		result.putFloat(y);
 		result.putFloat(z);
-		
+		//System.out.println("SitOnObject: " + result.flip().getHexDump());
 		return result.flip();
 	}
 

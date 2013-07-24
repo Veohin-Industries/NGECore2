@@ -93,7 +93,7 @@ public class CommandService implements INetworkDispatch  {
 				
 				//if(target == null)
 					//System.out.println("NULL Target");
-				
+
 				core.scriptService.callScript("scripts/commands/", command.getCommandName(), "run", core, actor, target, commandEnqueue.getCommandArguments());
 				
 			}

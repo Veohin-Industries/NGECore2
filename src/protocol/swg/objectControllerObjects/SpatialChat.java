@@ -87,7 +87,7 @@ public class SpatialChat extends ObjControllerObject {
 		
 		result.putInt(0);
 		result.putInt(0);
-		
+		//System.out.println("SpatialChat: " + result.flip().getHexDump());
 		return result.flip();
 	}
 	

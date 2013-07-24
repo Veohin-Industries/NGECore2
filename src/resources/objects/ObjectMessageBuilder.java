@@ -69,7 +69,7 @@ public abstract class ObjectMessageBuilder {
 		buf.putShort(updateCount);
 		buf.putShort(updateType);
 		buf.put(data);
-
+		//System.out.println("DeltaSent: " + buf.flip().getHexDump());
 		buf.flip();
 		return buf;
 

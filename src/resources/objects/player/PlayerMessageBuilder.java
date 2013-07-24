@@ -255,7 +255,7 @@ public class PlayerMessageBuilder extends ObjectMessageBuilder {
 
 		buffer.flip();
 		buffer = createBaseline("PLAY", (byte) 8, buffer, size);
-	
+		System.out.println("PLAY08" + buffer.getHexDump());
 		return buffer;
 	
 }

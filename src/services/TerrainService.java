@@ -115,13 +115,13 @@ public class TerrainService {
 
 	
 	public void loadSnapShotObjects() {
-		
+		System.out.println("Checking planets.");
 		for(Planet planet : planets) {
 			
 			if(planet.getSnapshotVisitor() != null) {
 				
 				core.objectService.loadSnapshotObjects(planet);
-				
+				System.out.println("started a planet.");
 			}
 			
 		}
