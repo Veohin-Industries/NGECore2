@@ -365,16 +365,6 @@ public class PlayerMessageBuilder extends ObjectMessageBuilder {
 	
 	}
 	
-	public IoBuffer buildTitleDelta(String title) {
-		IoBuffer buffer = bufferPool.allocate(4 + getAsciiString(title).length, false).order(ByteOrder.LITTLE_ENDIAN);
-		buffer.put(getAsciiString(title));
-		int size = buffer.position();
-		buffer.flip();
-		buffer = createDelta("PLAY", (byte) 3, (short) 1, (short) 0x07, buffer, size + 4);
-		return buffer;
-		
-	}
-	
 	public int getProfData(String profession) {
 		
 		switch (profession) {
@@ -403,7 +393,7 @@ public class PlayerMessageBuilder extends ObjectMessageBuilder {
 	
 	public IoBuffer buildTitleDelta(String title) {
 		
-		IoBuffer buffer = bufferPool.allocate(4, false).order(ByteOrder.LITTLE_ENDIAN);
+		IoBuffer buffer = bufferPool.allocate(4 + getAsciiString(title).length, false).order(ByteOrder.LITTLE_ENDIAN);
 		buffer.put(getAsciiString(title));
 		int size = buffer.position();
 		buffer.flip();

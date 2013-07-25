@@ -19,25 +19,37 @@
  * Using NGEngine to work with NGECore2 is making a combined work based on NGEngine. 
  * Therefore all terms and conditions of the GNU Lesser General Public License cover the combination.
  ******************************************************************************/
-package protocol.swg.objectControllerObjects;
+package resources.objects;
+
+import java.nio.ByteOrder;
+import java.util.List;
 
 import org.apache.mina.core.buffer.IoBuffer;
 
-public class UnknownObjController extends ObjControllerObject {
+import engine.resources.objects.SWGObject;
 
-	int objControllerType;
+public class Group extends ListObject {
 	
-	public UnknownObjController() {
-		
+	private int id;
+	
+	public Group(int id) {
+		this.id = id;
 	}
 	
-	public void deserialize(IoBuffer data) {
-		objControllerType = data.getInt();
-		System.out.println("Unknown Obj Controller");
+	public int getId() {
+		synchronized(objectMutex) {
+			return id;
+		}
 	}
 	
-	public IoBuffer serialize() {
-		System.out.println("Unknown Obj Controller");
-		return IoBuffer.allocate(0);
+	public void setId(int id) {
+		synchronized(objectMutex) {
+			this.id = id;
+		}
 	}
+
+	public byte[] getBytes() {
+		return null;
+	}
+
 }

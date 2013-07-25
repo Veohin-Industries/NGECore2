@@ -38,7 +38,7 @@ public class ObjectMenuRequest extends ObjControllerObject {
 
 	@Override
 	public void deserialize(IoBuffer buffer) {
-
+		System.out.println(buffer.getHexDump());
 		setCharacterId(buffer.getLong());
 		buffer.getInt();
 		setTargetId(buffer.getLong());

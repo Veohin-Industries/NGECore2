@@ -1,0 +1,85 @@
+tradeSession value equals the objectID of the person you want to trade with.
+
+Sometimes a player will close out window but wont register on the other client. << FIX
+
+Need to make it so adding a item or changing money will unaccept trade for clients.
+
+
+GiveMoney is sent to the server when a player changes their amount.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== EMU PACKET SecureTrade(sent from client) ===
+05 00 
+46 5E CE 80 // obj controller
+23 00 00 00 // Sub-Op
+15 01 00 00 // Command-Op 0x0115
+B1 74 4E 1F 00 00 01 00 // sender
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+18 7C FB 4A 00 00 01 00 // reciever
+
+
+=== EMU Packet AddItemMessage(sent from server) Client is opcount 2, Server is opcount 1 ===
+01 00 
+56 13 8D 1E 
+70 BD AF 4B 00 00 01 00 
+
+== Data dump, printed before gets, position 0 ==
+05 00 
+46 5E CE 80 
+23 00 00 00 
+15 01 
+00 00 // don't set position? start's here then.
+32 EE 8B 66 54 C0 AF C4 // send
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+AF FE 4B 2F D4 4D 07 76 // reciever
+
+
+== Add item Message dump after byte order ==
+AD 65 C5 CD 99 71 C0 42 DC DF CF 00 00 00 00 00 00 00 00 00 00 00
+
+== AddItemMessage dump in AddItemMessage.java ==
+E8 CB 
+B5 83 31 A6 
+4D B4 31 94 E2 00 00 00 
+00 00 00 00 00 00 00 00
+
+B6 1E
+61 EC 4F A8
+B6 4E 11 18 74 00 00 00 // rebel cape ID
+00 00 00 00 00 00 00 00
+
+=== ObjectMenuRequest dump @ start ===
+AF FE 4B 2F D4 4D 07 76  <<< CharacterId
+00 00 00 00  << placeholder int
+32 EE 8B 66 54 C0 AF C4 << target Id
+AF FE 4B 2F D4 4D 07 76  << characterId
+05 00 00 00 < list size int
+
+
+!!!!!SecureTrade builder working!!!!
+
+SECURE_TRADE sent from requester to client 
+get requester's objectID === DONE
+get requester's target Id === DONE
+send SECURE_TRADE serialize to the target === DONE
+
+
+Dhoemar
+ID: -4273986052621078990
+
+Friendplz
+ID: 6512275469390201127

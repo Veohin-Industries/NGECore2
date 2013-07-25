@@ -23,33 +23,47 @@ package resources.objects.group;
 
 import java.util.Vector;
 
-import resources.objects.SWGList;
+import main.NGECore;
+
+import org.apache.mina.core.buffer.IoBuffer;
+
 import engine.clients.Client;
 import engine.resources.objects.SWGObject;
+import resources.objects.Group;
+import resources.objects.SWGList;
+import resources.objects.group.GroupMessageBuilder;
 import engine.resources.scene.Point3D;
 import engine.resources.scene.Quaternion;
 
 
 public class GroupObject extends SWGObject {
 	
+	protected NGECore core;
+	
 	private Vector<SWGObject> memberList = new Vector<SWGObject>();
-	//private SWGList<SWGObject> memberList = new SWGList<SWGObject>();
 	private int memberListUpdateCounter;
+	
 	private SWGObject groupLeader;
 	private SWGObject lootMaster;
+	
 	private short groupLevel;
 	private int lootMode;
-	private int STFSpacer = 0;
+	
 	private int volume = 0;
+	
 	private String STFFile = "string_id_table";
 	private String STFName = "";
+	private int STFSpacer = 0;
 	private String customName = "";
+	
 	private String unkAsciiString = "";
+	
+	
 	
 	public GroupObject(long objectId) {
 		super(objectId, null, new Point3D(0, 0, 0), new Quaternion(0, 0, 0, 1), "object/group/shared_group_object.iff");
 	}
-
+	
 	public Vector<SWGObject> getMemberList() {
 		return memberList;
 	}
@@ -156,12 +170,6 @@ public class GroupObject extends SWGObject {
 		}
 	}
 	
-	public void setVolume(int volume) {
-		synchronized(objectMutex) {
-			this.volume = volume;
-		}
-	}
-	
 	public void setUnkAsciiString(String unkAsciiString) {
 		synchronized(objectMutex) {
 			this.unkAsciiString = unkAsciiString;
@@ -178,6 +186,21 @@ public class GroupObject extends SWGObject {
 	public void sendBaselines(Client client) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	private void notifyAll(IoBuffer buffer) {
+		//for (int i = 0; i < core.getActiveConnectionsMap().size(); i++) {
+		//	core.getActiveConnectionsMap().get(i).getSession().write(buffer);
+		//}
+		System.out.println("Notifying all...");
+		synchronized(core.getActiveConnectionsMap()) {
+			for (Client client : core.getActiveConnectionsMap().values()) {
+				System.out.println("Notifying..." + client.getParent().getCustomName());
+				client.getSession().write(buffer);
+				System.out.println("Notified them.");
+				System.out.println("Packet: " + buffer.getHexDump());
+			}
+		}
 	}
 
 }

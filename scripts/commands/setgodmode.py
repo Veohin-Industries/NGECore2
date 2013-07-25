@@ -48,7 +48,7 @@ def run(core, actor, target, commandString):
         actor.sendSystemMessage(currentPlanet, 0) 
         return  
     
-    if commandString == ('credits'):
+    if commandString.startswith('credits'):
         commandArgs = commandString.split(" ")
         wantedAmount = int(commandArgs[1])
         currentCredits = actor.getCashCredits()
@@ -97,5 +97,20 @@ def run(core, actor, target, commandString):
         playMusic = PlayMusicMessage('sound/music_combat_bfield_vict.snd')
         actor.getClient().getSession().write(playMusic.serialize())
         print ('Sent sound!')
+        return
+    
+    if commandString == ('myID'):
+        actor.sendSystemMessage('ID is: ' + str(actor.getObjectID()), 0)
+        print ('objectID: ' + str(actor.getObjectID))
+        return
+    
+    if commandString.startswith('itemID'):
+        commandArgs = commandString.split('itemID')
+        print ('commandArgs = ' + str(commandArgs))
+        
+        itemName = commandArgs
+        itemID = core.objectService.getObjectByCustomName(str(commandArgs)).getObjectID()
+        
+        print (str(commandArgs) + ' ID is: ' + str(itemID))
         return
     return
