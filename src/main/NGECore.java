@@ -45,6 +45,7 @@ import services.map.MapService;
 import services.object.ObjectService;
 import services.object.UpdateService;
 import services.sui.SUIService;
+import services.trade.TradeService;
 import engine.clientdata.ClientFileManager;
 import engine.clientdata.visitors.CrcStringTableVisitor;
 import engine.clientdata.visitors.DatatableVisitor;
@@ -99,6 +100,7 @@ public class NGECore {
 	public SUIService suiService;
 	public GuildService guildService;
 	public GCWService gcwService;
+	public TradeService tradeService;
 	
 	// Login Server
 	public NetworkDispatch loginDispatch;
@@ -167,24 +169,17 @@ public class NGECore {
 			e.printStackTrace();
 		}
 
-		System.out.println("Starting login server");
+
 		// Zone Server
 		try {
 			zoneDispatch = new NetworkDispatch(this, true);
 			zoneDispatch.addService(connectionService);
-			System.out.println("Starting connection service");
 			zoneDispatch.addService(characterService);
-			System.out.println("Starting character service");
 			zoneDispatch.addService(objectService);
-			System.out.println("Starting object service");
 			zoneDispatch.addService(commandService);
-			System.out.println("Starting command service");
 			zoneDispatch.addService(chatService);
-			System.out.println("Starting chat service");
 			zoneDispatch.addService(suiService);
-			System.out.println("Starting sui service");
 			zoneDispatch.addService(mapService);
-			System.out.println("Starting map service");
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -198,12 +193,11 @@ public class NGECore {
 		catch (Exception e) {
 			System.out.println(e.toString());
 		}
-		System.out.println("Started zone server.");
 		// Planets
 		terrainService.addPlanet(1, "tatooine", "terrain/tatooine.trn", true);
-		System.out.println("Added planet.");
+
 		terrainService.loadSnapShotObjects();
-		System.out.println("Loaded snapshot Objects");
+
 		// Zone services that need to be loaded after the above
 		simulationService = new SimulationService(this);
 		zoneDispatch.addService(simulationService);
@@ -214,6 +208,9 @@ public class NGECore {
 		gcwService = new GCWService(this);
 		zoneDispatch.addService(gcwService);
 
+		tradeService = new TradeService(this);
+		zoneDispatch.addService(tradeService);
+		
 		didServerCrash = false;
 		System.out.println("Started Server.");
 	}

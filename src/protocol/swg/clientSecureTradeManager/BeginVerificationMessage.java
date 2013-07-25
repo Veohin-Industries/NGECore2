@@ -8,7 +8,6 @@ public class BeginVerificationMessage extends SWGMessage {
 
 	@Override
 	public void deserialize(IoBuffer data) {
-		// XXX Auto-generated method stub
 		
 	}
 
