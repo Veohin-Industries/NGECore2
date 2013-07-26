@@ -45,5 +45,6 @@ public class Opcodes {
 	public static int SuiEventNotification = 0x092D3564;
 	public static int DeltasMessage = 0x12862153;
 	public static int ChatAddFriend = 0x6FE7BD90;
+	public static int CharacterSheetResponseMessage = 0x9B3A17C4;
 
 }
